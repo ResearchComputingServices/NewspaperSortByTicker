@@ -1,0 +1,317 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2016/January/CSV/ /home/nickshiell/storage/PickleJar/2016/January/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2016/February/CSV/ /home/nickshiell/storage/PickleJar/2016/February/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2016/March/CSV/ /home/nickshiell/storage/PickleJar/2016/March/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2016/April/CSV/ /home/nickshiell/storage/PickleJar/2016/April/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2016/May/CSV/ /home/nickshiell/storage/PickleJar/2016/May/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2016/June/CSV/ /home/nickshiell/storage/PickleJar/2016/June/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2016/July/CSV/ /home/nickshiell/storage/PickleJar/2016/July/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2016/August/CSV/ /home/nickshiell/storage/PickleJar/2016/August/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2016/September/CSV/ /home/nickshiell/storage/PickleJar/2016/September/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2016/October/CSV/ /home/nickshiell/storage/PickleJar/2016/October/
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2016/February/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2016/February/
+# of Files:  0
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2016/February/CSV/ : 0.01788043975830078 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2016/May/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2016/May/
+# of Files:  0
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2016/May/CSV/ : 0.022144079208374023 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2016/June/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2016/June/
+# of Files:  0
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2016/June/CSV/ : 0.029181241989135742 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2016/January/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2016/January/
+# of Files:  0
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2016/January/CSV/ : 0.0329432487487793 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2016/March/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2016/March/
+# of Files:  0
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2016/March/CSV/ : 0.03601241111755371 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2016/July/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2016/July/
+# of Files:  0
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2016/July/CSV/ : 0.03372550010681152 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2016/April/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2016/April/
+# of Files:  0
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2016/April/CSV/ : 0.00856781005859375 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2016/August/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2016/August/
+# of Files:  8
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2016/August/CSV/ : 248.58152842521667 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2016/October/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2016/October/
+# of Files:  37
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2016/October/CSV/ : 737.5981531143188 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2016/September/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2016/September/
+# of Files:  31
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2016/September/CSV/ : 954.8595430850983 [s]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2016/November/CSV/ /home/nickshiell/storage/PickleJar/2016/November/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2016/December/CSV/ /home/nickshiell/storage/PickleJar/2016/December/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2017/January/CSV/ /home/nickshiell/storage/PickleJar/2017/January/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2017/February/CSV/ /home/nickshiell/storage/PickleJar/2017/February/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2017/March/CSV/ /home/nickshiell/storage/PickleJar/2017/March/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2017/April/CSV/ /home/nickshiell/storage/PickleJar/2017/April/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2017/May/CSV/ /home/nickshiell/storage/PickleJar/2017/May/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2017/June/CSV/ /home/nickshiell/storage/PickleJar/2017/June/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2017/July/CSV/ /home/nickshiell/storage/PickleJar/2017/July/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2017/August/CSV/ /home/nickshiell/storage/PickleJar/2017/August/
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2016/November/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2016/November/
+# of Files:  32
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2016/November/CSV/ : 745.287252664566 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2016/December/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2016/December/
+# of Files:  99
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2016/December/CSV/ : 2697.617073059082 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2017/July/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2017/July/
+# of Files:  124
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2017/July/CSV/ : 6520.002342224121 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2017/April/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2017/April/
+# of Files:  125
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2017/April/CSV/ : 7897.941852092743 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2017/August/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2017/August/
+# of Files:  121
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2017/August/CSV/ : 8070.487529754639 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2017/January/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2017/January/
+# of Files:  172
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2017/January/CSV/ : 8182.882524728775 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2017/February/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2017/February/
+# of Files:  138
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2017/February/CSV/ : 8759.764512777328 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2017/March/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2017/March/
+# of Files:  120
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2017/March/CSV/ : 9234.875938415527 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2017/May/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2017/May/
+# of Files:  130
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2017/May/CSV/ : 9273.077946901321 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2017/June/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2017/June/
+# of Files:  127
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2017/June/CSV/ : 9652.112480640411 [s]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2017/September/CSV/ /home/nickshiell/storage/PickleJar/2017/September/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2017/October/CSV/ /home/nickshiell/storage/PickleJar/2017/October/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2017/November/CSV/ /home/nickshiell/storage/PickleJar/2017/November/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2017/December/CSV/ /home/nickshiell/storage/PickleJar/2017/December/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2018/January/CSV/ /home/nickshiell/storage/PickleJar/2018/January/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2018/February/CSV/ /home/nickshiell/storage/PickleJar/2018/February/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2018/March/CSV/ /home/nickshiell/storage/PickleJar/2018/March/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2018/April/CSV/ /home/nickshiell/storage/PickleJar/2018/April/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2018/May/CSV/ /home/nickshiell/storage/PickleJar/2018/May/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2018/June/CSV/ /home/nickshiell/storage/PickleJar/2018/June/
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2018/February/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2018/February/
+# of Files:  119
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2018/February/CSV/ : 5072.6901178359985 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2017/December/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2017/December/
+# of Files:  124
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2017/December/CSV/ : 5566.243061542511 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2018/January/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2018/January/
+# of Files:  148
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2018/January/CSV/ : 5930.747034549713 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2018/May/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2018/May/
+# of Files:  211
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2018/May/CSV/ : 6199.209111690521 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2018/April/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2018/April/
+# of Files:  205
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2018/April/CSV/ : 6233.1482219696045 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2018/June/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2018/June/
+# of Files:  218
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2018/June/CSV/ : 6288.1184911727905 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2017/November/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2017/November/
+# of Files:  112
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2017/November/CSV/ : 6890.918344736099 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2018/March/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2018/March/
+# of Files:  233
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2018/March/CSV/ : 7407.875091314316 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2017/September/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2017/September/
+# of Files:  145
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2017/September/CSV/ : 8298.641631364822 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2017/October/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2017/October/
+# of Files:  139
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2017/October/CSV/ : 8305.463519573212 [s]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2018/July/CSV/ /home/nickshiell/storage/PickleJar/2018/July/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2018/August/CSV/ /home/nickshiell/storage/PickleJar/2018/August/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2018/September/CSV/ /home/nickshiell/storage/PickleJar/2018/September/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2018/October/CSV/ /home/nickshiell/storage/PickleJar/2018/October/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2018/November/CSV/ /home/nickshiell/storage/PickleJar/2018/November/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2018/December/CSV/ /home/nickshiell/storage/PickleJar/2018/December/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2019/January/CSV/ /home/nickshiell/storage/PickleJar/2019/January/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2019/February/CSV/ /home/nickshiell/storage/PickleJar/2019/February/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2019/March/CSV/ /home/nickshiell/storage/PickleJar/2019/March/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2019/April/CSV/ /home/nickshiell/storage/PickleJar/2019/April/
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2018/December/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2018/December/
+# of Files:  243
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2018/December/CSV/ : 5662.792582035065 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2018/September/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2018/September/
+# of Files:  209
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2018/September/CSV/ : 6479.2313141822815 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2018/July/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2018/July/
+# of Files:  208
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2018/July/CSV/ : 6484.165588140488 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2019/February/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2019/February/
+# of Files:  205
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2019/February/CSV/ : 6538.043170213699 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2018/November/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2018/November/
+# of Files:  309
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2018/November/CSV/ : 6736.9705147743225 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2019/April/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2019/April/
+# of Files:  215
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2019/April/CSV/ : 6965.9099316596985 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2018/August/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2018/August/
+# of Files:  212
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2018/August/CSV/ : 7097.409564256668 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2019/January/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2019/January/
+# of Files:  226
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2019/January/CSV/ : 7616.399616479874 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2019/March/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2019/March/
+# of Files:  243
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2019/March/CSV/ : 7696.853852033615 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2018/October/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2018/October/
+# of Files:  296
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2018/October/CSV/ : 9153.50117301941 [s]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2019/May/CSV/ /home/nickshiell/storage/PickleJar/2019/May/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2019/June/CSV/ /home/nickshiell/storage/PickleJar/2019/June/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2019/July/CSV/ /home/nickshiell/storage/PickleJar/2019/July/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2019/August/CSV/ /home/nickshiell/storage/PickleJar/2019/August/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2019/September/CSV/ /home/nickshiell/storage/PickleJar/2019/September/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2019/October/CSV/ /home/nickshiell/storage/PickleJar/2019/October/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2019/November/CSV/ /home/nickshiell/storage/PickleJar/2019/November/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2019/December/CSV/ /home/nickshiell/storage/PickleJar/2019/December/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2020/January/CSV/ /home/nickshiell/storage/PickleJar/2020/January/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2020/February/CSV/ /home/nickshiell/storage/PickleJar/2020/February/
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2019/May/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2019/May/
+# of Files:  262
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2019/May/CSV/ : 8218.203158855438 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2019/June/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2019/June/
+# of Files:  303
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2019/June/CSV/ : 9212.49331688881 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2019/July/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2019/July/
+# of Files:  325
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2019/July/CSV/ : 10395.303859472275 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2019/October/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2019/October/
+# of Files:  345
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2019/October/CSV/ : 11071.118420362473 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2019/August/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2019/August/
+# of Files:  324
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2019/August/CSV/ : 11079.285224676132 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2019/September/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2019/September/
+# of Files:  339
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2019/September/CSV/ : 12435.35039973259 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2019/December/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2019/December/
+# of Files:  391
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2019/December/CSV/ : 12439.78392124176 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2019/November/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2019/November/
+# of Files:  357
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2019/November/CSV/ : 12447.35208940506 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2020/January/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2020/January/
+# of Files:  426
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2020/January/CSV/ : 14870.495418310165 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2020/February/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2020/February/
+# of Files:  411
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2020/February/CSV/ : 15204.9232442379 [s]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2020/March/CSV/ /home/nickshiell/storage/PickleJar/2020/March/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2020/April/CSV/ /home/nickshiell/storage/PickleJar/2020/April/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2020/May/CSV/ /home/nickshiell/storage/PickleJar/2020/May/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2020/July/CSV/ /home/nickshiell/storage/PickleJar/2020/July/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2020/June/CSV/ /home/nickshiell/storage/PickleJar/2020/June/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2020/August/CSV/ /home/nickshiell/storage/PickleJar/2020/August/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2020/October/CSV/ /home/nickshiell/storage/PickleJar/2020/October/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2020/September/CSV/ /home/nickshiell/storage/PickleJar/2020/September/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2020/December/CSV/ /home/nickshiell/storage/PickleJar/2020/December/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2020/November/CSV/ /home/nickshiell/storage/PickleJar/2020/November/
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2020/July/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2020/July/
+# of Files:  450
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2020/July/CSV/ : 12760.461916446686 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2020/June/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2020/June/
+# of Files:  439
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2020/June/CSV/ : 12988.596452713013 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2020/December/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2020/December/
+# of Files:  477
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2020/December/CSV/ : 13656.303865909576 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2020/August/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2020/August/
+# of Files:  434
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2020/August/CSV/ : 14053.039369821548 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2020/September/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2020/September/
+# of Files:  471
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2020/September/CSV/ : 14716.43955874443 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2020/November/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2020/November/
+# of Files:  491
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2020/November/CSV/ : 14946.531455516815 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2020/May/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2020/May/
+# of Files:  423
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2020/May/CSV/ : 15335.183428764343 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2020/October/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2020/October/
+# of Files:  504
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2020/October/CSV/ : 16336.645998239517 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2020/April/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2020/April/
+# of Files:  423
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2020/April/CSV/ : 17912.231489419937 [s]
+Input Data(CSV):  /home/nickshiell/storage/CC-NEWS-EN/2020/March/CSV/
+Output Data(PKL):  /home/nickshiell/storage/PickleJar/2020/March/
+# of Files:  441
+Execution time for  /home/nickshiell/storage/CC-NEWS-EN/2020/March/CSV/ : 17999.208015441895 [s]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2021/January/CSV/ /home/nickshiell/storage/PickleJar/2021/January/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2021/February/CSV/ /home/nickshiell/storage/PickleJar/2021/February/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2021/March/CSV/ /home/nickshiell/storage/PickleJar/2021/March/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2021/April/CSV/ /home/nickshiell/storage/PickleJar/2021/April/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2021/May/CSV/ /home/nickshiell/storage/PickleJar/2021/May/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2021/June/CSV/ /home/nickshiell/storage/PickleJar/2021/June/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2021/July/CSV/ /home/nickshiell/storage/PickleJar/2021/July/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2021/August/CSV/ /home/nickshiell/storage/PickleJar/2021/August/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2021/September/CSV/ /home/nickshiell/storage/PickleJar/2021/September/
+python3 productionScript.py /home/nickshiell/storage/CC-NEWS-EN/2021/October/CSV/ /home/nickshiell/storage/PickleJar/2021/October/

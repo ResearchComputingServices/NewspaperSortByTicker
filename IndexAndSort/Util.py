@@ -1,1 +1,1 @@
-/home/nickshiell/NewspaperSTLSorting/ArticleSorter/Util/Util.py
+/home/nickshiell/NewspaperSTLSorting/Util/Util.py

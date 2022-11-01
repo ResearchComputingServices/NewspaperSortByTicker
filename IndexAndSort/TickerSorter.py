@@ -6,7 +6,7 @@ import time
 import Util
 
 ##########################################################################################################
-# This function searches for instances of tickerList elements in the pandas data frame
+# This function searches for instances of COMPANY NAMES in the pandas data frame
 ##########################################################################################################
 def CleanCompanyName(companyName):
     
@@ -23,7 +23,52 @@ def CleanCompanyName(companyName):
        
     return cleanName.strip()
 
+def SearchForCompanyNameInPDF(pdf, tickerAndCompanyList, DEBUG):
 
+    pdf['Ticker(s)'] = ''
+       
+    nRows = len(pdf.index)
+    for iRow, row in pdf.iterrows():
+        if DEBUG:
+            print(iRow, " / ", nRows)
+        
+        textIndex = row['TextIndex']
+               
+        if DEBUG:
+            print(textIndex)
+
+        foundTickerList = []
+        for entry in tickerAndCompanyList:
+            companyFound = False
+            
+            ticker = entry[0]
+            company = CleanCompanyName(entry[1])
+                
+            # Company names look for lower case
+            for item in company.split(' '): 
+                if item in textIndex.Keys():
+                    companyFound = True
+                else:
+                    companyFound = False
+                    break
+            
+            if companyFound:
+                foundTickerList.append(ticker)  
+
+        pdf.loc[iRow]['Ticker(s)'] = foundTickerList
+        
+        if DEBUG and len(foundTickerList) > 0:
+            print(pdf.loc[iRow]['Title'], ': ', pdf.loc[iRow]['Ticker(s)'])
+        
+        if DEBUG:
+            input()
+        
+    return pdf
+
+
+##########################################################################################################
+# This function searches for instances of tickerList elements in the pandas data frame
+##########################################################################################################
 def SearchForTickersInPDF(pdf, tickerAndCompanyList, DEBUG):
 
     pdf['Ticker(s)'] = ''
@@ -40,31 +85,16 @@ def SearchForTickersInPDF(pdf, tickerAndCompanyList, DEBUG):
 
         foundTickerList = []
         for entry in tickerAndCompanyList:
-            stockFound = False
             tickerFound = False
-            companyFound = False
             
             ticker = entry[0]
-            company = CleanCompanyName(entry[1])
             
             # tickers should be ALL capitalized
             if ticker in textIndex.keys():
-                tickerFound = True
-                
-            # Company names look for lower case
-            for item in company.split(' '): 
-                if item in textIndex.Keys():
-                    companyFound = True
-                else:
-                    companyFound = False
-                    break
-            
-            #if stockFound:
-            #    foundTickerList.append(ticker)  
-            if companyFound:
+                tickerFound = True               
+           
+            if tickerFound:
                 foundTickerList.append(ticker)  
-
-
 
         pdf.loc[iRow]['Ticker(s)'] = foundTickerList
         

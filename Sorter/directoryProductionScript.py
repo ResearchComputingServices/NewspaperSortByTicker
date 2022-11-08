@@ -22,8 +22,7 @@ else:
 
 startTime = time.time()
 
-#ArticleIndexerProductionRun(inputPKLDir,outputPKLDir)
-print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+ArticleIndexerProductionRun(inputPKLDir,outputPKLDir)
 TickerSorterProductionRun(inputPKLDir,outputPKLDir,tickerListFilePath)
 
 executionTime = (time.time() - startTime)

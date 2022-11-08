@@ -6,7 +6,7 @@ import time
 import Util
 
 ##########################################################################################################
-# This function searches for instances of COMPANY NAMES in the pandas data frame
+# This function searches for instances of COMPANY NAMES in the ARTICLE stored in the pandas data frame
 ##########################################################################################################
 def CleanCompanyName(companyName):
     
@@ -23,53 +23,38 @@ def CleanCompanyName(companyName):
        
     return cleanName.strip()
 
-def SearchForCompanyNameInPDF(pdf, tickerAndCompanyList, DEBUG):
+def SearchForCompanyNameInArticlePDF(pdf, tickerAndCompanyList, DEBUG = False):  
 
-    pdf['Ticker(s)'] = ''
-       
-    nRows = len(pdf.index)
+    pdf['CompanyNames'] = ''
+    pdf['SearchTerms'] = ''
+
     for iRow, row in pdf.iterrows():
-        if DEBUG:
-            print(iRow, " / ", nRows)
         
-        textIndex = row['TextIndex']
-               
-        if DEBUG:
-            print(textIndex)
+        articleText = row['Article']
+        tickerList = row['Ticker(s)']
 
-        foundTickerList = []
-        for entry in tickerAndCompanyList:
-            companyFound = False
-            
-            ticker = entry[0]
-            company = CleanCompanyName(entry[1])
-                
+        foundCompanyList = []
+        searchTermsList = []
+        for ticker in tickerList:
+            companyName = tickerAndCompanyList[ticker]
+
+            searchTermsList.append(ticker+':'+companyName)
+
             # Company names look for lower case
-            for item in company.split(' '): 
-                if item in textIndex.Keys():
-                    companyFound = True
-                else:
-                    companyFound = False
-                    break
-            
-            if companyFound:
-                foundTickerList.append(ticker)  
+            if companyName.lower() in articleText.lower():
+                foundCompanyList.append(companyName)
+                
+                
 
-        pdf.loc[iRow]['Ticker(s)'] = foundTickerList
-        
-        if DEBUG and len(foundTickerList) > 0:
-            print(pdf.loc[iRow]['Title'], ': ', pdf.loc[iRow]['Ticker(s)'])
-        
-        if DEBUG:
-            input()
-        
+        pdf.loc[iRow]['CompanyNames'] = foundCompanyList
+        pdf.loc[iRow]['SearchTerms'] = searchTermsList
     return pdf
 
 
 ##########################################################################################################
 # This function searches for instances of tickerList elements in the pandas data frame
 ##########################################################################################################
-def SearchForTickersInPDF(pdf, tickerAndCompanyList, DEBUG):
+def SearchForTickersInIndexPDF(pdf, tickerAndCompanyList, DEBUG = False):
 
     pdf['Ticker(s)'] = ''
        
@@ -84,10 +69,10 @@ def SearchForTickersInPDF(pdf, tickerAndCompanyList, DEBUG):
             print(textIndex)
 
         foundTickerList = []
-        for entry in tickerAndCompanyList:
+        for key in tickerAndCompanyList.keys():
             tickerFound = False
             
-            ticker = entry[0]
+            ticker = key
             
             # tickers should be ALL capitalized
             if ticker in textIndex.keys():
@@ -110,13 +95,13 @@ def SearchForTickersInPDF(pdf, tickerAndCompanyList, DEBUG):
 #  This function opens a .pkl file and searches it for instances of tickerList elements
 ##########################################################################################################
 
-def SearchForTickersInPickleFile(pickleFilePath, tickerList, DEBUG=False):
+def SearchForTickersInIndexPKL(pickleFilePath, tickerList, DEBUG=False):
 
     print('Searching: ', pickleFilePath)
     
     df = pandas.read_pickle(pickleFilePath)  
     
-    SearchForTickersInPDF(df, tickerList, DEBUG)
+    SearchForTickersInIndexPDF(df, tickerList, DEBUG)
 
     return df
 
@@ -127,19 +112,63 @@ def SearchForTickersInPickleFile(pickleFilePath, tickerList, DEBUG=False):
 def ReadTickers(stockListFilePath):
     
     tickerList = []
-    tickerAndCompanyList = []
+    tickerAndCompanyDict = {}
+
     with open(stockListFilePath, 'r') as inputFile:
         for line in inputFile:          
             lineSplit = line.strip().split(',')
             ticker = lineSplit[0]
-            company = lineSplit[1]
-            entry = [ticker, company]
-            # do this check to remove duplicates
-            if not ticker in tickerList:
-                tickerAndCompanyList.append(entry)
-                tickerList.append(ticker)
+            company =  CleanCompanyName(lineSplit[1])
+            
+            if ticker not in tickerAndCompanyDict.keys():
+                tickerAndCompanyDict[ticker] = company
    
-    return tickerAndCompanyList
+    return tickerAndCompanyDict
+
+##########################################################################################################
+# This function performs the two level search on a single Panda's Data Frame
+##########################################################################################################
+def TickerSorterPandasDF(pdf, stockListFilePath):
+    
+    # get the ticker/company dict
+    tickerAndCompanyDict = ReadTickers(stockListFilePath)
+
+   
+    # do initial sybmol only search of index
+    pdf = SearchForTickersInIndexPDF(pdf,tickerAndCompanyDict)
+   
+    # use the found stock symbols to search for associated comapny names in ARTICLE
+    pdf = SearchForCompanyNameInArticlePDF(pdf,tickerAndCompanyDict)
+   
+    return pdf
+
+##########################################################################################################
+# This function performs the two level search on a single PKL file
+##########################################################################################################
+def TickerSorterSinglePKLFile(filename, inputPickleFileDir, outputPickleFileDir, stockListFilePath):
+
+    # This will be returned
+    pdf = pandas.DataFrame()
+
+    # make sure the directories have the right format (ie. end with /)
+    inputPickleFileDir = Util.CheckDirectoryPath(inputPickleFileDir)
+    outputPickleFileDir = Util.CheckDirectoryPath(outputPickleFileDir)
+    
+    # Check the correct type of file has been passed in
+    if Util.ExtensionOnly(filename) != 'pkl':
+         print('Invalid file type (only .pkl files): ', filename)
+    else:
+        # open and read the pickle file
+        inputPickleFilePath = inputPickleFileDir + filename
+        pdf = pandas.read_pickle(inputPickleFilePath)  
+      
+        # The actual sorting happens here
+        pdf = TickerSorterPandasDF(pdf, stockListFilePath)
+        
+        # save results
+        pdf.to_pickle(outputPickleFileDir + filename)
+           
+    return pdf
 
 ##########################################################################################################
 # This function will searches all the Pickle files in a directory for instances of elements of the
@@ -162,10 +191,4 @@ def TickerSorterProductionRun(inputPickleFileDir, outputPickleFileDir, stockList
     print('# of files: ', len(listOfFiles))
 
     for filename in listOfFiles:
-
-        # TODO: This check should be performed in the function
-        if Util.ExtensionOnly(filename) == 'pkl':
-            pdf = SearchForTickersInPickleFile(outputPickleFileDir + filename,tickerAndCompanyList)
-            pdf.to_pickle(outputPickleFileDir + filename)
-        else:
-            print('Invalid file type (only .pkl files): ', filename)
+        TickerSorterSinglePKLFile(filename, inputPickleFileDir, outputPickleFileDir, tickerAndCompanyList)

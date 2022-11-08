@@ -7,52 +7,6 @@ import pandas as pd
 
 import Util
 
-#from curses.ascii import isspace
-#from urllib.parse import urlsplit, urlunsplit
-#import hashlib
-
-##########################################################################################################
-# This function tries to extract just the article from the webscrape. It does this by looking for the 
-# largest cluster of words seperated by (1 or 2 spaces) OR (. and any # of spaces) 
-##########################################################################################################
-def ExtractArticle(item, debug=False):
-    articleText = str(item['Article'])
-    
-    listOfClusters = []
-    cluster = str()
-    cleanedArticleTest = str()
-    
-    spaceCounter = 0
-    lastNonWhiteSpaceCharacter = ''
-    for c in articleText:
-        cluster += c
-       
-        if not c.isspace():
-            lastNonWhiteSpaceCharacter = c
-            spaceCounter = 0
-        else:
-            spaceCounter += 1
-            
-        if spaceCounter > 3 and lastNonWhiteSpaceCharacter != '.':
-
-            if(len(cluster) > len(cleanedArticleTest)):
-                cleanedArticleTest = cluster
-            
-            cluster = ''
-            lastNonWhiteSpaceCharacter = ''
-            spaceCounter = 0
-            
-    
-    if debug:
-        print(cleanedArticleTest)
-        print(item['URL'])
-        print(item['Title'])
-        print("Length of Original Article: ", len(articleText))    
-        print("Length of Cleaned Article: ", len(cleanedArticleTest))    
-        input()
-        
-    return cleanedArticleTest
-
 ########################################################################
 # Function that looks through all the rows to make sure there are no 
 # errors. If there are it tries to fix them

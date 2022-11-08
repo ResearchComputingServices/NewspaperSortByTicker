@@ -16,8 +16,9 @@ import Util
 def RemovePunctuation(text):
     cleanedText = ''
     for word in word_tokenize(text):
+        
         if word.isalpha():
-            cleanedText += word + ' ' 
+            cleanedText += word + ' '            
    
     return cleanedText 
 
@@ -77,10 +78,10 @@ def TextIndexer(text, delim = ' '):
 ########################################################################################################## 
 def CleanAndIndexPandasDF(  pdf, 
                             DEBUG = False, 
-                            doStopWords = True,
+                            doStopWords = False,
                             doPunctuation = True,
-                            doLemma = True):
-
+                            doLemma = False):
+                            
     # Add a column to the data frame to hold the text index
     if 'TextIndex' in pdf.columns:
         pdf.drop(['TextIndex'], axis=1)
@@ -91,6 +92,8 @@ def CleanAndIndexPandasDF(  pdf,
     for iRow, row in pdf.iterrows():
         articleText = str(row['Article'])
         cleanedArticleText = articleText
+
+        #cleanedArticleText = Util.ExtractArticle(cleanedArticleText,True)
 
         if DEBUG:
             print('ORIGINAL TEXT:')
@@ -104,8 +107,6 @@ def CleanAndIndexPandasDF(  pdf,
                 print('STOP WORDS REMOVED:')
                 print(cleanedArticleText)
                 print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-
-
 
         if doPunctuation:
             cleanedArticleText = RemovePunctuation(cleanedArticleText)
@@ -146,13 +147,36 @@ def CleanAndIndexPickleFile(inputPickleFilePath,
                             doStopWords = False,
                             doPunctuation = True,
                             doLemma = False):
-     
-    print('Cleaning and indexing file: ', inputPickleFilePath)
 
     pdf = pd.read_pickle(inputPickleFilePath)
 
     return CleanAndIndexPandasDF(pdf, DEBUG, doStopWords, doPunctuation, doLemma)
+
+##########################################################################################################
+# This function Cleans, Indexs, as Saves a single PKL file
+##########################################################################################################
+def CleanAndIndexSinglePKLFile(filename, inputPickleFileDir, outputPickleFileDir):
+
+    # make sure the directories have the right format (ie. end with /
+    inputPickleFileDir = Util.CheckDirectoryPath(inputPickleFileDir)
+    outputPickleFileDir = Util.CheckDirectoryPath(outputPickleFileDir)
+
+    pdf = pd.DataFrame()
+
+    # Check the correct type of file has been passed in
+    if Util.ExtensionOnly(filename) != 'pkl':
+         print('Invalid file type (only .pkl files): ', filename)
+    else:
+        # Open and clean the file
+        inputPickleFilePath = inputPickleFileDir + filename    
+        pdf = CleanAndIndexPickleFile(inputPickleFilePath)
+        
+        # Now that The data file has been cleaned and index save the PKL file
+        outputFilePath = outputPickleFileDir + filename
+        pdf.to_pickle(outputFilePath)
     
+    return pdf
+
 ##########################################################################################################
 # This function Cleans and Indexs all the Pickle files in a given directory
 ##########################################################################################################
@@ -169,13 +193,7 @@ def ArticleIndexerProductionRun(inputPickleFileDir, outputPickleFileDir):
     print("# of Files: ", len(listOfFiles))
 
     for filename in listOfFiles:
-        inputPickleFilePath = inputPickleFileDir + filename 
-        
-        pdf = CleanAndIndexPickleFile(inputPickleFilePath)
-        
-        # Now that The data file has been cleaned and index we can save the data frame to a pickle file.
-        outputFilePath = outputPickleFileDir + Util.FilenameOnly(filename) + ".pkl"
-        pdf.to_pickle(outputFilePath)
+        CleanAndIndexSinglePKLFile(filename,inputPickleFileDir, outputPickleFileDir)
 
       
       

@@ -7,7 +7,6 @@ from typing import List
 from dataclasses import dataclass, field
 from time import sleep
 
-
 from nltk.corpus import stopwords
 from urllib.parse import urlsplit, urlunsplit
 
@@ -250,7 +249,7 @@ def Display(iRow, row, article, searchSeedList):
 # This function searches a specific row in a data frame
 ############################################################################################################
 def SearchRow(iRow, row, tickerDict, VERBOSE = False):
-      
+        
     searchSeedList = []
             
     # Get data from the dataframe
@@ -301,12 +300,14 @@ def AppendResultsToDataFrame(pdf, searchSeedList, iRow, columnName = 'SEARCH_RES
 # the function appends a column to the dataframe which contains the found references
 ############################################################################################################
 def SearchPKLFile(filePath,tickerDict, columnName = 'SEARCH_RESULTS', VERBOSE = False):
+    
     pdf = pd.read_pickle(filePath)
 
+    # add the 'SEARCH_RESULTS' column to the data frame
     pdf[columnName] = ''
 
     for iRow, row in pdf.iterrows():
-        searchSeedList = SearchRow(iRow, row, tickerDict, VERBOSE)
+        searchSeedList = SearchRow(iRow, row, tickerDict, VERBOSE=VERBOSE)
         pdf = AppendResultsToDataFrame(pdf, searchSeedList, iRow)
             
     return pdf
@@ -325,12 +326,15 @@ def TestFunction():
 
     for month in monthList:
         
+        print('Month: ', month)
+        
         searchLocation = pickleFileDir+month+'/'
         listOfFiles = Util.listdir_nohidden(searchLocation)
 
         for filename in listOfFiles:
+            print('Filename: ', filename)
             filePath = searchLocation + filename
-            pdf = SearchPKLFile(filePath, tickerDict, VERBOSE)
+            pdf = SearchPKLFile(filePath, tickerDict, VERBOSE=VERBOSE)
             pdf.to_pickle(filePath)
             
     sys.exit()
@@ -352,14 +356,14 @@ def InspectPKLFile(filePath):
 # Production Run:
 ############################################################################################################  
 def ProductionRun(pickleFilePath, tickerDictFilePath, VERBOSE = False):
+    
     print(pickleFilePath)
-    searchLocation = pickleFilePath
-    listOfFiles = Util.listdir_nohidden(searchLocation)
+    listOfFiles = Util.listdir_nohidden(pickleFilePath)
 
     tickerDict = ReadTickers(tickerDictFilePath)
 
     for filename in listOfFiles:
-        filePath = searchLocation + filename
+        filePath = pickleFilePath + filename
         pdf = SearchPKLFile(filePath, tickerDict, VERBOSE=VERBOSE)       
 
         if VERBOSE:        
@@ -371,3 +375,5 @@ def ProductionRun(pickleFilePath, tickerDictFilePath, VERBOSE = False):
         pdf.to_pickle(filePath) 
     
     sys.exit()
+
+TestFunction()

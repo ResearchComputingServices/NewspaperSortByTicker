@@ -1,17 +1,20 @@
 #!/bin/bash
+#####################################################################################################
 # TEST RUN
 # ./autoPickleScript.sh /home/nickshiell/storage/TestSet home/nickshiell/storage/TestSet/PickleJar
+#
+#YEARS=(2016)
+#MONTHS=(August September October November December)
+#####################################################################################################
 
+#####################################################################################################
 # PRODUCTION RUN
 #./autoPickleScript.sh /home/nickshiell/storage/CC-NEWS-EN /home/nickshiell/storage/PickleJar
-
+#
 # For production run
 YEARS=(2016 2017 2018 2019 2020 2021 2022)
 MONTHS=(January February March April May June July August September October November December)
-
-# For test run
-#YEARS=(2016)
-#MONTHS=(August September October November December)
+#####################################################################################################
 
 JOB_ARRAY=()
 

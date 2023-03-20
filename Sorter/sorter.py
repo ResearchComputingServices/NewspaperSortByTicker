@@ -5,7 +5,7 @@ import re
 import pandas as pd
 from typing import List
 from dataclasses import dataclass, field
-from time import sleep
+import time
 
 from nltk.corpus import stopwords
 from urllib.parse import urlsplit, urlunsplit
@@ -357,23 +357,40 @@ def InspectPKLFile(filePath):
 ############################################################################################################  
 def ProductionRun(pickleFilePath, tickerDictFilePath, VERBOSE = False):
     
-    print(pickleFilePath)
     listOfFiles = Util.listdir_nohidden(pickleFilePath)
-
     tickerDict = ReadTickers(tickerDictFilePath)
-
-    for filename in listOfFiles:
-        filePath = pickleFilePath + filename
-        pdf = SearchPKLFile(filePath, tickerDict, VERBOSE=VERBOSE)       
-
-        if VERBOSE:        
-            for iRow, row in pdf.iterrows():          
-                if len(row['SEARCH_RESULTS']) > 0:
-                    print(iRow,':',row['SEARCH_RESULTS'])
-                    input('Press ENTER to continue...')
-
-        pdf.to_pickle(filePath) 
     
-    sys.exit()
+    if len(listOfFiles) > 0:
+        for filename in listOfFiles:
+            filePath = pickleFilePath + filename
+            pdf = SearchPKLFile(filePath, tickerDict, VERBOSE=VERBOSE)       
 
-TestFunction()
+            if VERBOSE:        
+                for iRow, row in pdf.iterrows():          
+                    if len(row['SEARCH_RESULTS']) > 0:
+                        print(iRow,':',row['SEARCH_RESULTS'])
+                        input('Press ENTER to continue...')
+
+            pdf.to_pickle(filePath) 
+    else:
+        print('[WARNING]: No files found in directory: ', pickleFilePath)
+    
+    return 
+    
+############################################################################################################
+
+pickleFilePath = ''
+tickerDictFilePath = ''
+
+# Make sure that the command line args are present
+if len(sys.argv) == 3:
+    pickleFilePath = sys.argv[1]
+    tickerDictFilePath = sys.argv[2]
+else:
+    print('ERROR: invalid command line args: ', sys.argv)
+    exit(0)
+
+startTime = time.time()
+ProductionRun(pickleFilePath,tickerDictFilePath)
+executionTime = (time.time() - startTime)
+print('Execution time for ', pickleFilePath,': ' + str(executionTime),'[s]')

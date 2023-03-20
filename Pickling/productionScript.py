@@ -1,6 +1,5 @@
 import Picklizer
 import sys
-import Util
 import time
 
 #/home/nickshiell/storage/TestSet

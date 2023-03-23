@@ -373,7 +373,7 @@ def ProductionRun(pickleFilePath, tickerDictFilePath, VERBOSE = False):
 pickleFilePath = ''
 tickerDictFilePath = ''
 
-VERBOSE = True
+VERBOSE = False
 
 # Make sure that the command line args are present
 if len(sys.argv) == 3:

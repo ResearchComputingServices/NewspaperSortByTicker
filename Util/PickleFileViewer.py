@@ -1,20 +1,9 @@
-import pandas as pd
 import sys
-import string
+
+import pandas as pd
 from colorama import Fore, Back, Style
 
 import Util
-
-
-ignoreList = ['N:INCO', 'ANN:ANN', 'AOL:AOL','PLUS:EPLUS', 'VIEW:VIEW', 'S:SPRINT', 'ADAM:ADAM', 'CR:CRANE', 'VANS:VANS', 'CA:CA', 
-'B:BARNES', 'NICE:NICE', 'BEST:BEST', 'ANTM:ANTHEM', 'BP:BP', 'HOPE:HOPE', 'T:AT&T', 'OMG:OM', 'IMAX:IMAX', 'TIME:TIME', 'ITT:ITT', 
-'BT:BT', 'SOS:SOS', 'LONG:ELONG', 'FOX:FOX', 'TNS:TNS', 'DPL:DPL', 'ROME:ROME', 'PMI:PMI', 'HOME:AT HOME', 'CME:CME', 'STEM:STEM', 
-'TROY:TROY', 'CNE:CNE', 'PHC:PHC', 'AJAX:AJAX', 'IT:GARTNER','DSS:DSS', 'PCB:PCB', 'MSCI:MSCI', 'CRH:CRH', 'NCR:NCR', 'BHP:BHP', 
-'USB:US', 'NWS:NEWS', 'CIA:CITIZENS', 'MUST:COLUMBIA', 'CBRE:CBRE', 'APA:APA', 'PALM:PALM', 'BCE:BCE', 'CSRA:CSRA', 'HOPE:HOPE', 
-'SNAP:SNAP', 'GBS:GBS', 'PVH:PVH', 'ADT:ADT', 'EMC:EMC','TIME:TIME', 'UNIT:UNITI','USG:USG', 'LEAF:LEAF','FMC:FMC']
-
-
-#ignoreList = []
 
 def Display(row, rowNumber):
    
@@ -102,6 +91,17 @@ def CountResults(pickleFileDir):
 ###################################################################################################
 # interact with the above functions through interface below
 ###################################################################################################
-pickleFilePath = '/home/nickshiell/storage/PickleJar/2016/December/file-70.pkl'
+
+pickleFilePath = ''
+
+# example file path
+# pickleFilePath = '/home/nickshiell/storage/PickleJar/2016/December/file-70.pkl'
+
+# Make sure that the command line args are present
+if len(sys.argv) == 2:
+    pickleFilePath = sys.argv[1]
+else:
+    print('[ERROR]: insufficient cmd line args: ', sys.argv)
+    exit(0)
 
 InspectPKLFile(pickleFilePath)

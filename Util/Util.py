@@ -1,5 +1,6 @@
 import os
 import operator
+import re
 from pathlib import Path
 
 ########################################################################
@@ -115,6 +116,25 @@ textProCarbonTax =  str('Increasing the price of carbon is the most efficient an
                         'through these approaches would be lower than the costs to people and the planet from climate change,” the report said. “Finance ministers ' +
                         'in all countries are central to designing and implementing policies to meet emissions reductions in the most efficient, equitable, and ' +
                         'socially and politically acceptable way.”')
+
+########################################################################
+# Function that clears white s[ace from brackets ()
+#######################################################################
+
+def CleanWhiteSpace(article):
+    cleanedArticle = article
+
+    # this like replaces multiple white space with a single space
+    cleanedArticle = re.sub(' +', ' ', cleanedArticle)
+
+    # this replaces all '( ' with a sinlge '('
+    cleanedArticle = re.sub('\( ', '(', cleanedArticle)
+    
+    # this replaces all ' )' with a sinlge ')'
+    cleanedArticle = re.sub(' \)', ')', cleanedArticle)
+
+    return cleanedArticle
+
 
 ########################################################################
 # Function that returns a list of all none hidden objects in directory

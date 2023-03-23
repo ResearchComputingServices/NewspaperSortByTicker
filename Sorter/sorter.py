@@ -72,8 +72,8 @@ def ReadTickers(stockListFilePath, verbose=False):
                     counter += 1
    
     if verbose:
-        for idx,key in enumerate(tickerDict):   
-            print(idx,':',key,':',tickerDict[key])
+        for idx,key in enumerate(tickerList):   
+            print(idx,':',key,':',tickerList[key])
     
             if (idx+1) % 5 == 0:
                 input()
@@ -94,23 +94,6 @@ def RemoveStopWords(text):
             cleanedText += addWord + ' '
     
     return cleanedText
-
-############################################################################################################
-# This function cleans up excess whitespaces in the article
-############################################################################################################
-def CleanWhiteSpace(article):
-    cleanedArticle = article
-
-    # this like replaces multiple white space with a single space
-    cleanedArticle = re.sub(' +', ' ', cleanedArticle)
-
-    # this replaces all '( ' with a sinlge '('
-    cleanedArticle = re.sub('\( ', '(', cleanedArticle)
-    
-    # this replaces all ' )' with a sinlge ')'
-    cleanedArticle = re.sub(' \)', ')', cleanedArticle)
-
-    return cleanedArticle
 
 ############################################################################################################
 # This function searches for the name of a company near the location in the text where the symbol was found
@@ -256,7 +239,7 @@ def SearchRow(iRow, row, tickerDict, VERBOSE = False):
     article = row['Article']
 
     # Clean the article by removing excess white space
-    article = CleanWhiteSpace(article)
+    article =Util.CleanWhiteSpace(article)
    
     # Find all bracketed text and identify those containing stock symbols
     StockSymbolSearch(article,tickerDict, searchSeedList)
@@ -363,17 +346,25 @@ def ProductionRun(pickleFilePath, tickerDictFilePath, VERBOSE = False):
     if len(listOfFiles) > 0:
         for filename in listOfFiles:
             filePath = pickleFilePath + filename
+            
+            s = time.time()
+            print('Starting: ',filename,end='')
+            
             pdf = SearchPKLFile(filePath, tickerDict, VERBOSE=VERBOSE)       
-
             if VERBOSE:        
                 for iRow, row in pdf.iterrows():          
                     if len(row['SEARCH_RESULTS']) > 0:
                         print(iRow,':',row['SEARCH_RESULTS'])
                         input('Press ENTER to continue...')
+            
+            
+            runTime = time.time() - s
+            print('...Done ',runTime, '[s]')
 
             pdf.to_pickle(filePath) 
     else:
-        print('[WARNING]: No files found in directory: ', pickleFilePath)
+        runTime = time.time() - s
+        print('[WARNING]: No files found in directory: ', pickleFilePath,  runTime, '[s]')
     
     return 
     
@@ -381,6 +372,8 @@ def ProductionRun(pickleFilePath, tickerDictFilePath, VERBOSE = False):
 
 pickleFilePath = ''
 tickerDictFilePath = ''
+
+VERBOSE = True
 
 # Make sure that the command line args are present
 if len(sys.argv) == 3:
@@ -391,6 +384,6 @@ else:
     exit(0)
 
 startTime = time.time()
-ProductionRun(pickleFilePath,tickerDictFilePath)
+ProductionRun(pickleFilePath, tickerDictFilePath, VERBOSE)
 executionTime = (time.time() - startTime)
 print('Execution time for ', pickleFilePath,': ' + str(executionTime),'[s]')

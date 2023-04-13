@@ -40,9 +40,13 @@ The bash script autoStript.sh found in the Sorter/ directory can be used to auto
 information on lines 21 to 25. 
 
 Line 21: YEARS = the years in the file folder structure (same as the pickling script)
+
 Line 22: MONTHS = the months in the file folder structure (same as the pickling script)
+
 Line 23: BASE_PKL_DATA_DIR = base directory  where ther pickle files were saved
+
 Line 24: TICKER_FILE_PATH = location of the file name tickersCompanyNames.csv"
+
 Line 25: NUM_PROCESSES = the number of processors to distribute the task over
 
 The results of the search are save to the same files that were used as input.

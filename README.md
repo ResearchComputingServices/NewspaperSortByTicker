@@ -36,7 +36,7 @@ The .pkl files will be store in a similar manner as the csv files (ie. {base_dir
 
 # Stage 2: Searching for Stock Symbols in the Pickle Files
 
-The bash script autoStript.sh found in the Sorter/ directory can be used to automate search process. Two use the script simply enter the correct 
+The bash script autoStript.sh found in the Sorter/ directory can be used to automate search process. To use the script simply enter the correct 
 information on lines 21 to 25. 
 
 Line 21: YEARS = the years in the file folder structure (same as the pickling script)   

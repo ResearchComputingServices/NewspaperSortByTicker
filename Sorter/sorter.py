@@ -18,7 +18,7 @@ import Util
 @dataclass
 class SearchSeed:
     bracket: str = ''                                           # bracket that acts as the seed for an indepth search
-    bracketIndex: int = -1                                      # the location with in the article that the bracket was found
+    bracketIndex: int = -1                                      # the location within the article that the bracket was found
     foundSymbolsList: List = field(default_factory=lambda: [])  # a list of all the stock symbols found in the bracketed text
     subString: str = ''                                         # substring from the article before the bracket used to find the company name
     subStringIndex = -1                                         # starting location of the substring

@@ -118,7 +118,7 @@ textProCarbonTax =  str('Increasing the price of carbon is the most efficient an
                         'socially and politically acceptable way.”')
 
 ########################################################################
-# Function that clears white s[ace from brackets ()
+# Function that clears white space from brackets ()
 #######################################################################
 
 def CleanWhiteSpace(article):
@@ -149,7 +149,8 @@ def listdir_nohidden(directory):
         listOfContents = os.listdir(directory)
         
         for item in listOfContents:
-            if not item.startswith('.') and os.path.isfile(directory + item):
+            itemPath = os.path.join(directory, item)
+            if not item.startswith('.') and os.path.isfile(itemPath):
                 listOfFiles.append(item)
 
     return listOfFiles
@@ -322,3 +323,17 @@ def ExtractArticle(articleText, debug=False):
         input()
         
     return cleanedArticleTest
+
+############################################################################################################
+# Reads all the stock symbols from a file and returns them as a list
+############################################################################################################
+def ReadTickerFile(tickerDictFilePath):
+    
+    symbolList = []
+    
+    with open(tickerDictFilePath, 'r') as inputFile:
+        for line in inputFile:          
+            lineSplit = line.strip().split(',')
+            symbolList.append(lineSplit[0])
+            
+    return symbolList  

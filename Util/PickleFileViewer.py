@@ -5,6 +5,10 @@ from colorama import Fore, Back, Style
 
 import Util
 
+###################################################################################################
+# Displays a row from the pickle file
+###################################################################################################
+
 def Display(row, rowNumber):
    
     resultsList = row['SEARCH_RESULTS']
@@ -34,7 +38,8 @@ def Display(row, rowNumber):
     print('Title:', row['Title'])
     print('URL:', row['URL'])
     print('FOUND SYMBOL:', foundSymbolList)
-    print('FOUND COMPANY:', foundCompanyList)    
+    print('FOUND COMPANY:', foundCompanyList)
+    print('ResultList:', resultsList)  
 
 ###################################################################################################
 # Reads a PKL file and outputs the results when companies were found
@@ -95,7 +100,7 @@ def CountResults(pickleFileDir):
 pickleFilePath = ''
 
 # example file path
-# pickleFilePath = '/home/nickshiell/storage/PickleJar/2016/December/file-70.pkl'
+# pickleFilePath = '/home/nickshiell/storage/BaChu/PickleJar/2016/December/file-70.pkl'
 
 # Make sure that the command line args are present
 if len(sys.argv) == 2:
